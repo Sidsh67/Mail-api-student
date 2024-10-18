@@ -1,0 +1,27 @@
+package com.demo.SchedulersDemo;
+
+import org.junit.jupiter.api.Test;
+import org.mockito.Mock;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.mail.javamail.JavaMailSender;
+
+import jakarta.inject.Inject;
+
+@SpringBootTest
+public class EmailServiceTest {
+
+
+	@Inject
+	EmailServiceImpl serviceImpl;
+	
+	
+	@Test
+	void EmailServiceTest() {
+		
+		
+		serviceImpl.sendEmail("sidhantbhargav1@gmail.com", "demo mail", "thats my code mail");
+		System.out.println("sending email");
+		
+	}
+}

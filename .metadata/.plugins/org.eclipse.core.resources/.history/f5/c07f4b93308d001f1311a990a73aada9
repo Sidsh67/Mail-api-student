@@ -1,0 +1,13 @@
+package com.demo.SchedulersDemo.request;
+
+import java.util.List;
+
+public class EmailRequest {
+
+	private List<String> to;
+ 	
+	private String subject;
+	
+	private String message;
+	
+}

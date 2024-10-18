@@ -1,0 +1,31 @@
+package com.study.student.web;
+
+import java.util.UUID;
+
+import org.quartz.JobBuilder;
+import org.quartz.JobDataMap;
+import org.quartz.JobDetail;
+
+import com.study.student.job.EmailJob;
+import com.study.student.payload.EmailRequest;
+
+public class EmailScedulerController {
+
+	
+	private JobDetail buildjobDetail(EmailRequest scheduleEmailRequest) {
+		
+		JobDataMap jobDataMap=new JobDataMap();
+		
+		jobDataMap.put("email", scheduleEmailRequest.getEmail());
+		jobDataMap.put("body", scheduleEmailRequest.getBody());
+		jobDataMap.put("subject", scheduleEmailRequest.getSubject());
+		
+		return JobBuilder.newJob(EmailJob.class)
+				.withIdentity(UUID.randomUUID().toString(),"email-job").
+				withDescription("Send Email Job")
+				.usingJobData(jobDataMap)
+				.storeDurably().
+				build();
+		
+	}
+}

@@ -1,0 +1,5 @@
+package com.study.student.payload;
+
+public class EmailResponse {
+
+}

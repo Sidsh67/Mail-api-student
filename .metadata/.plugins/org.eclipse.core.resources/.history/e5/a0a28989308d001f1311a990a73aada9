@@ -1,0 +1,5 @@
+package com.demo.SchedulersDemo.request;
+
+public class EmailRequest {
+
+}

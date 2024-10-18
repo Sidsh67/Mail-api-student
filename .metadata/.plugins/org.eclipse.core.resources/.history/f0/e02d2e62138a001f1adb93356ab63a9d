@@ -1,0 +1,5 @@
+package com.study.student.job;
+
+public class EmailJob {
+
+}

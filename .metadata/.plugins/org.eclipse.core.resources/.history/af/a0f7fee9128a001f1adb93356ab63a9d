@@ -1,0 +1,20 @@
+package com.study.student.web;
+
+import org.quartz.JobDataMap;
+import org.quartz.JobDetail;
+
+import com.study.student.payload.EmailRequest;
+
+public class EmailScedulerController {
+
+	
+	private JobDetail buildjobDetail(EmailRequest scheduleEmailRequest) {
+		
+		JobDataMap jobDataMap=new JobDataMap();
+		
+		jobDataMap.put("email", scheduleEmailRequest.getEmail());
+		jobDataMap.put("body", scheduleEmailRequest.getBody());
+		jobDataMap.put("subject", scheduleEmailRequest.getSubject());
+		
+	}
+}

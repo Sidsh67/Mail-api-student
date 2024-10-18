@@ -1,0 +1,28 @@
+package com.demo.SchedulersDemo;
+
+import java.io.File;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+import jakarta.inject.Inject;
+
+@SpringBootTest
+public class EmailServiceTest {
+
+	@Inject
+	EmailServiceImpl serviceImpl;
+
+//	@Test
+//	void EmailServiceTest() {
+//
+//		serviceImpl.sendEmail("sidhantbhargav1@gmail.com", "demo mail", "thats my code mail");
+//		System.out.println("sending email");
+//
+//	}
+
+	@Test
+	void emailServiceWithfileTest() {
+		serviceImpl.sendEmailWithFile("sidhantbhargav1@gmail.com", "file send","this email contains file" , new File("this is my first file", "file:///D:/JavaSchedulers/SchedulersDemo/src/main/resources/static/pexels-souvenirpixels-417074.jpg"));
+	}
+}

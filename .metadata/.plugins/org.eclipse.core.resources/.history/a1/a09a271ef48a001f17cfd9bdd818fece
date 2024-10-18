@@ -1,0 +1,10 @@
+package com.demo.SchedulersDemo;
+
+public interface EmailSender {
+
+//	For Single person
+	void sendEmail(String to, String subject, String message);
+	
+//	For multiple person
+	void sendEmail(String[] to, String subject, String message);
+}

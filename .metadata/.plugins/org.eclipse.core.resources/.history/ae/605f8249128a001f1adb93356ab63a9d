@@ -1,0 +1,5 @@
+package com.study.student.web;
+
+public class EmailScedulerController {
+
+}

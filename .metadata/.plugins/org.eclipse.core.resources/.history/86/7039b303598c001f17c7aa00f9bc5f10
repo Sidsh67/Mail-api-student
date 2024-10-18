@@ -1,0 +1,20 @@
+package com.demo.SchedulersDemo;
+
+import java.io.File;
+
+import javax.swing.text.html.HTML;
+
+public interface EmailSender {
+
+//	For Single person
+	void sendEmail(String to, String subject, String message);
+	
+//	For multiple person
+	void sendEmail(String[] to, String subject, String message);
+	
+//	send Email with file
+	void sendEmailWithFile(String []to, String subject, String message, File file );
+	
+//	send email with html
+	void sendEmailWithHtml(String to , String subject, String message, String htmlContent);
+}

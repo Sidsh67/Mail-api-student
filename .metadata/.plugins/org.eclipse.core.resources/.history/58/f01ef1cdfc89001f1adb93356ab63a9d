@@ -1,0 +1,41 @@
+spring.application.name=student-service
+
+server.port=8082
+
+#Postgre Configurations
+
+spring.datasource.username=postgres
+spring.datasource.password=root
+spring.datasource.url=jdbc:postgresql://localhost:5432/sheduler_module
+spring.datasource.driver-class-name=org.postgresql.Driver
+spring.jpa.show-sql=true
+spring.jpa.hibernate.ddl-auto=create
+
+spring.data.mongodb.host=localhost
+spring.data.mongodb.port= 27017
+#spring.data.mongodb.database=comments_service
+
+
+logging.level.org.mongodb.driver=INFO
+
+server.error.whitelabel.enabled=false
+
+#Quartz Properties
+
+spring.quartz.job-store-type=jdbc
+spring.quartz.properties.org.threadpool.threadcount=5
+#org.quartz.jobstore.driverDelegateClass=org.quartz.impl.jdbcstore.StdJDBCDelegate
+
+
+spring.quartz.jdbc.initialize-schema=always
+spring.quartz.properties.org.quartz.jobStore.driverDelegateClass=org.quartz.impl.jdbcjobstore.PostgreSQLDelegate
+spring.quartz.properties.org.quartz.jobStore.isClustered=true
+spring.quartz.properties.org.quartz.scheduler.instanceId=AUTO
+
+#mail Properties
+spring.mail.host=smtp.gmail.com
+spring.mail.port=587
+spring.mail.username=sidsh67@gmail.com
+spring.mail.password=
+spring.mail.properties..mail.smtp.auth=true
+spring.mail.properties.mail.smtp.starttls.enable=true
